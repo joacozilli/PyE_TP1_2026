@@ -31,9 +31,10 @@ ggplot(datos, aes(x = areas_mng)) +
   ) +
   
   labs(
-    title = "Cantidad de áreas temáticas con marcos normativos sobre IA",
+    title = "Distribución de países segun cantidad de áreas temáticas con marcos normativos sobre IA",
     x = "Cantidad de áreas",
     y = "Cantidad de países"
   ) +
   
   theme_minimal()
+
