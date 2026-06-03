@@ -13,7 +13,7 @@ datos <- read_sheet(url,sheet = "tp", skip = 1)
 
 ggplot(datos, aes(x = GIRAI_region, y = areas_ag)) +
   geom_boxplot(fill = "lightblue", color = "darkblue") +
-  labs(title = "cantidad de áreas con acciones gubernamentales para abordar la IA por región",
+  labs(title = "Cantidad de áreas con acciones gubernamentales para abordar la IA por región",
        x = "Región GIRAI",
        y = "Cantidad de áreas (areas_ag)") +
   theme_minimal() +
