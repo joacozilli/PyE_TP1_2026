@@ -28,17 +28,18 @@ ggplot(tabla_dim,
            y = porcentaje,
            fill = `Dimensión mejor puntuada`)) +
   
-  geom_bar(stat = "identity", position = "dodge") +
+  geom_bar(stat = "identity", position = "stack") +
   
   labs(
     title = "Dimensión mejor puntuada según región",
     x = "Región",
     y = "Porcentaje de países",
-    fill = "Dimensión"
+    fill = "Dimensión" # Esto mantiene el título actual de la leyenda
   ) +
-  
+  scale_fill_discrete(
+    labels = c("Capacidad", "Derechos humanos", "Gobernanza")
+  ) +
   theme_minimal() +
-  
   theme(
     plot.title = element_text(hjust = 0.5),
     axis.text.x = element_text(angle = 20, hjust = 1)
